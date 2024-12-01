@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+  nodejs:
+    image: node
+    restart: always
+    ports:
+      - 3000:3000
+      # You can add more configurations like volumes or environment variables if needed
+
