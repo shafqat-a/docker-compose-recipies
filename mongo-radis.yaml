@@ -16,10 +16,5 @@ services:
     restart: always
     ports:
       - 6379:6379
-  nodejs:
-    image: node
-    restart: always
-    ports:
-      - 3000:3000
-      # You can add more configurations like volumes or environment variables if needed
+
 
